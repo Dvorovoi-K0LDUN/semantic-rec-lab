@@ -1,0 +1,29 @@
+# Виртуальное окружение
+.venv/
+
+# Кэш Python
+__pycache__/
+*.py[cod]
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Исходные и обработанные данные
+data/raw/
+data/processed/
+
+# Обученные модели и артефакты
+models/
+artifacts/
+checkpoints/
+
+# Логи экспериментов
+mlruns/
+
+# Секреты и переменные окружения
+.env
+.env.*
+
+# Системные файлы
+.DS_Store
+Thumbs.db
