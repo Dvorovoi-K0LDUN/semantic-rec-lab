@@ -10,6 +10,7 @@ DATASET_URL = (
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 RAW_DATA_DIR = PROJECT_ROOT / "data" / "raw"
 ARCHIVE_PATH = RAW_DATA_DIR / "ml-100k.zip"
+EXTRACTED_DATA_DIR = RAW_DATA_DIR / "ml-100k"
 
 
 def main() -> None:
@@ -31,6 +32,13 @@ def main() -> None:
 
     # TODO 2:
     # Скачать DATASET_URL в ARCHIVE_PATH.
+    if EXTRACTED_DATA_DIR.exists():
+        print("database already")
+    else:
+        with ZipFile(ARCHIVE_PATH, "r") as archive:
+            archive.extractall(RAW_DATA_DIR)
+        print("database unpacking")
+
 
     # TODO 3:
     # Распаковать архив в RAW_DATA_DIR.
