@@ -35,4 +35,19 @@ Semantic ID и генеративным рекомендациям.
 Из корня проекта:
 
 ```powershell
-.venv\Scripts\python.exe src\check_environment.py
+.venv\Scripts\python.exe src\check_environment.
+
+## Загрузка данных
+
+Проект использует MovieLens 100K. Сам датасет не хранится
+в Git-репозитории и загружается отдельным скриптом.
+
+```powershell
+python src\data\download_movielens.py
+```
+
+После запуска исходные файлы сохраняются в:
+
+```text
+data/raw/
+```
